@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login Page</title>
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="formbox">
+                <h1 id="title">Sign Up</h1>
+                <form>
+                    <div class="inputgroup">
+                        <div class="inputfield" id="namefield">
+                           <img src="user.svg" >
+                           <input type="text" placeholder="Name">
+                           </div>
+
+                           <div class="inputfield" id="agefield">
+                            <img src="calendar.svg" >
+                            <input type="text" placeholder="Age">
+                            </div>
+
+                            <div class="inputfield" id="genderfield">
+                                <img src="gender.svg" >
+                                <input type="text" placeholder="Gender">
+                                </div>
+
+                           <div class="inputfield">
+                            <img src="envelope.svg" >
+                            <input type="text" placeholder="Email ID">
+                        </div>
+
+                        <div class="inputfield">
+                            <img src="lock.svg" >
+                            <input type="password" placeholder="Password">
+                        </div>
+                        <p>Forgot Password <a href="#">Click Here!</a> </p>
+                    </div>
+                    <div class="btnfield">
+                        <button type ="button" id="signupbtn">Sign Up</button>
+                        <button type ="button" class="disable" id="signinbtn">Sign In</button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+          <script>
+
+           let signupbtn = document.getElementById("signupbtn");
+           let signinbtn = document.getElementById("signinbtn");
+           let namefield = document.getElementById("namefield");
+           let agefield = document.getElementById("agefield");
+           let genderfield = document.getElementById("genderfield");
+           let title = document.getElementById("title");
+
+            signinbtn.onclick = function(){
+            namefield.style.maxHeight = "0";
+            agefield.style.maxHeight = "0";
+            genderfield.style.maxHeight = "0";
+            title.innerHTML = "Sign In";
+            signupbtn.classList.add("disable");
+            signinbtn.classList.remove("disable");
+           }
+
+            signupbtn.onclick = function(){
+            namefield.style.maxHeight = "60px";
+            agefield.style.maxHeight = "60px";
+            genderfield.style.maxHeight = "60px";
+            title.innerHTML = "Sign Up";
+            signinbtn.classList.add("disable");
+            signupbtn.classList.remove("disable");
+           }
+
+          </script>
+    </body>
+    </html>
+    </html>
